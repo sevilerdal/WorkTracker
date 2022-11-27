@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WorkTracker.Views.TimerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkTracker.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="400">
+    <Border BorderBrush="AntiqueWhite" BorderThickness="0.5"
+            Background="#39386B">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <TextBox    Grid.Column="0" Name="WorkInput"
+                        HorizontalAlignment="Left"   BorderThickness="0"
+                        Text="What are you working on?" Background="Transparent"
+                        Foreground="AntiqueWhite" FontSize="20" VerticalAlignment="Center"
+                        Margin="5,0,0,0" GotFocus="WorkInput_GotFocus" >
+                
+            </TextBox>
+
+            <TextBlock Grid.Column="1" HorizontalAlignment="Right"
+                       x:Name="TimerDisplay" MinWidth="75" 
+                       Margin="10,5,5,5" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap" Foreground="AliceBlue">
+
+            </TextBlock> 
+            <Button Grid.Column="3"
+                HorizontalAlignment="Right" VerticalAlignment="Center"
+                MaxHeight="60" Background="#7E7AEB"
+                 MinWidth="45" MinHeight="45" BorderThickness="0"
+                x:Name="ToggleButton" Click="ToggleButton_Click" >
+               
+
+                <Image Margin="10" x:Name="buttonImage"
+                        Source="C:\Users\Ozg\source\repos\WorkTracker\WorkTracker\Images/PlayBtton.png"/>
+                            
+         </Button>
+        </Grid>
+        
+    </Border>
+</UserControl>

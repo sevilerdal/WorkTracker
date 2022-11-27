@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WorkTracker.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkTracker.Views"
+             mc:Ignorable="d" 
+             d:MinHeight="50" d:DesignWidth="350">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="SettingsButton"
+                Grid.Row="1"
+                Grid.Column="0" Margin="3"
+                Content="Settings" Foreground="AntiqueWhite"
+                Background="Transparent"/>
+
+       
+        <Button x:Name="HelpButton"
+                Grid.Column="1" Margin="3" Grid.Row="1"
+                Background="Transparent"
+                Content="Help" Foreground="AntiqueWhite"/>
+
+        
+    </Grid>
+    
+    
+    
+</UserControl>

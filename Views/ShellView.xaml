@@ -1,0 +1,62 @@
+﻿<Window x:Class="WorkTracker.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkTracker.Views"
+        mc:Ignorable="d" Background="Transparent" WindowStyle="None"
+        AllowsTransparency="True" MouseDown="Window_MouseDown"
+        ResizeMode="CanResizeWithGrip"
+        Title="ShellView"  MinWidth="400"
+        Height="300" MaxWidth="500" MouseEnter="Shell_MouseEnter" MouseLeave="Shell_MouseLeave">
+    <Border CornerRadius="10" Background="#222140">
+        
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+            <StackPanel Background="#9595a3" Grid.Row="0" Grid.RowSpan="2"
+                    Grid.Column="0" Grid.ColumnSpan="3"> 
+        <StackPanel Orientation="Horizontal" Background="Transparent"
+            HorizontalAlignment="Right" >
+
+            <Button x:Name="MinimizeWindow" 
+                Grid.Column="3" BorderThickness="0"
+                Background="Transparent" Foreground="Azure" Click="Minimize">
+                        
+                        <Image VerticalAlignment="Top" Width="20" Margin="7"
+
+                   Source="C:\Users\Ozg\source\repos\WorkTracker\WorkTracker\Images/MinimizeB.png" />
+            </Button>
+            <Button x:Name="CloseWindow" BorderThickness="0"
+                Grid.Column="4" Width="20" Margin="7"
+                Background="Transparent" Foreground="Azure" Click="Close">
+
+                <Image VerticalAlignment="Top"
+                   Source="C:\Users\Ozg\source\repos\WorkTracker\WorkTracker\Images/CloseB.png" />
+            </Button>
+        </StackPanel>
+</StackPanel> 
+        <ContentControl Grid.Row="2" Grid.Column="1"
+                        x:Name="MenuView" />
+        <ContentControl Grid.Row="3" Grid.Column="1"
+                        x:Name="TimerView" />
+           
+            <ContentControl Grid.Row="5" Grid.Column="1"
+                        x:Name="DataView" />
+        </Grid>
+    </Border>
+</Window>
