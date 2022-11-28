@@ -5,7 +5,7 @@ namespace WorkTracker.ViewModels
 {
     public class MenuViewModel : Screen
     {
-        private readonly string docLink;
+        private readonly string docLink="https://github.com/sevilerdal/WorkTracker";
         public void SettingsButton()
         {
             MessageBox.Show("Upcoming features : Auto-save, notifications");
